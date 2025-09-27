@@ -83,9 +83,16 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Start: Cloud Infrastructure Setup]
+    classDef startEnd fill:#4CAF50,stroke:#333,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef phase fill:#2196F3,stroke:#333,stroke-width:1.5px,color:#fff,font-weight:bold;
+    classDef task fill:#90CAF9,stroke:#333,stroke-width:1px,color:#000;
+    classDef subtask fill:#E3F2FD,stroke:#333,stroke-width:1px,color:#000,font-style:italic;
+
+    A([Start: Cloud Infrastructure Setup])
+    class A startEnd
 
     subgraph Provisioning and Infrastructure
+        direction TB
         A1[Define Requirements]
         A2[Choose Cloud Provider - AWS, Azure, GCP]
         A3[Set up Physical Infrastructure - Data Centers]
@@ -95,16 +102,22 @@ flowchart TD
         A7[Implement Identity and Access Management - IAM]
         A8[Infrastructure as Code - Terraform, CloudFormation, ARM]
     end
+    class Provisioning and Infrastructure phase
+    class A1,A2,A3,A4,A5,A6,A7,A8 task
 
     subgraph Environment Configuration and Deployment
+        direction TB
         B1[Install OS and Middleware]
         B2[Configure Security Policies]
         B3[Deploy Applications - Containers, Docker, Kubernetes]
         B4[Set up Monitoring and Logging Tools]
         B5[Automate CI/CD Pipelines]
     end
+    class Environment Configuration and Deployment phase
+    class B1,B2,B3,B4,B5 task
 
     subgraph Environment Uses
+        direction TB
         C1[Web Hosting]
         C2[Data Storage and Backup]
         C3[Application Development and Testing]
@@ -112,8 +125,11 @@ flowchart TD
         C5[AI/ML Model Training]
         C6[Disaster Recovery]
     end
+    class Environment Uses phase
+    class C1,C2,C3,C4,C5,C6 task
 
     subgraph Working and Maintenance
+        direction TB
         D1[Monitor Infrastructure Performance]
         D2[Scale Resources Dynamically - Auto-scaling]
         D3[Apply Security Updates and Patch Management]
@@ -121,6 +137,8 @@ flowchart TD
         D5[Cost Management and Optimization]
         D6[Decommission and Resource Cleanup]
     end
+    class Working and Maintenance phase
+    class D1,D2,D3,D4,D5,D6 task
 
     %% Flow Connections
     A --> A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7 --> A8 --> B1
@@ -136,6 +154,7 @@ flowchart TD
     C4 --> D1
     C5 --> D1
     C6 --> D1
+
 
 
 ```
