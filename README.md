@@ -87,19 +87,19 @@ flowchart TD
 
     subgraph Provisioning and Infrastructure
         A1[Define Requirements]
-        A2[Choose Cloud Provider [AWS, Azure, GCP]]
+        A2[Choose Cloud Provider - AWS, Azure, GCP]
         A3[Set up Physical Infrastructure - Data Centers]
-        A4[Create Virtual Machines / Instances]
-        A5[Configure Networking [VPC, Subnets, Security Groups]]
-        A6[Provision Storage [Block, Object, File]]
-        A7[Implement Identity and Access Management (IAM)]
-        A8[Infrastructure as Code [Terraform, CloudFormation, ARM]]
+        A4[Create Virtual Machines or Instances]
+        A5[Configure Networking - VPC, Subnets, Security Groups]
+        A6[Provision Storage - Block, Object, File]
+        A7[Implement Identity and Access Management - IAM]
+        A8[Infrastructure as Code - Terraform, CloudFormation, ARM]
     end
 
     subgraph Environment Configuration and Deployment
         B1[Install OS and Middleware]
         B2[Configure Security Policies]
-        B3[Deploy Applications [Containers / Docker / Kubernetes]]
+        B3[Deploy Applications - Containers, Docker, Kubernetes]
         B4[Set up Monitoring and Logging Tools]
         B5[Automate CI/CD Pipelines]
     end
@@ -115,7 +115,7 @@ flowchart TD
 
     subgraph Working and Maintenance
         D1[Monitor Infrastructure Performance]
-        D2[Scale Resources Dynamically (Auto-scaling)]
+        D2[Scale Resources Dynamically - Auto-scaling]
         D3[Apply Security Updates and Patch Management]
         D4[Backup and Disaster Recovery Operations]
         D5[Cost Management and Optimization]
@@ -136,6 +136,7 @@ flowchart TD
     C4 --> D1
     C5 --> D1
     C6 --> D1
+
 
 ```
 
