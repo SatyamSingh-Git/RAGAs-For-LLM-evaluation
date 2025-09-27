@@ -91,7 +91,7 @@ flowchart TD
     A([Start: Cloud Infrastructure Setup])
     class A startEnd
 
-    subgraph Provisioning and Infrastructure
+    subgraph Provisioning_and_Infrastructure
         direction TB
         A1[Define Requirements]
         A2[Choose Cloud Provider - AWS, Azure, GCP]
@@ -102,10 +102,9 @@ flowchart TD
         A7[Implement Identity and Access Management - IAM]
         A8[Infrastructure as Code - Terraform, CloudFormation, ARM]
     end
-    class Provisioning and Infrastructure phase
     class A1,A2,A3,A4,A5,A6,A7,A8 task
 
-    subgraph Environment Configuration and Deployment
+    subgraph Environment_Configuration_and_Deployment
         direction TB
         B1[Install OS and Middleware]
         B2[Configure Security Policies]
@@ -113,10 +112,9 @@ flowchart TD
         B4[Set up Monitoring and Logging Tools]
         B5[Automate CI/CD Pipelines]
     end
-    class Environment Configuration and Deployment phase
     class B1,B2,B3,B4,B5 task
 
-    subgraph Environment Uses
+    subgraph Environment_Uses
         direction TB
         C1[Web Hosting]
         C2[Data Storage and Backup]
@@ -125,10 +123,9 @@ flowchart TD
         C5[AI/ML Model Training]
         C6[Disaster Recovery]
     end
-    class Environment Uses phase
     class C1,C2,C3,C4,C5,C6 task
 
-    subgraph Working and Maintenance
+    subgraph Working_and_Maintenance
         direction TB
         D1[Monitor Infrastructure Performance]
         D2[Scale Resources Dynamically - Auto-scaling]
@@ -137,7 +134,6 @@ flowchart TD
         D5[Cost Management and Optimization]
         D6[Decommission and Resource Cleanup]
     end
-    class Working and Maintenance phase
     class D1,D2,D3,D4,D5,D6 task
 
     %% Flow Connections
@@ -154,7 +150,6 @@ flowchart TD
     C4 --> D1
     C5 --> D1
     C6 --> D1
-
 
 
 ```
